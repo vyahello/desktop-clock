@@ -20,6 +20,11 @@ class Window(ABC):
         """Start main loop of a window."""
         pass
 
+    @abstractmethod
+    def stop_loop(self) -> None:
+        """Stop main loop of a window."""
+        pass
+
 
 class ClockMaster(Window):
     """The class represents root ui window of a clock."""
@@ -43,3 +48,6 @@ class ClockMaster(Window):
 
     def start_loop(self, count: int = 0) -> None:
         self._master.mainloop(count)
+
+    def stop_loop(self) -> None:
+        self._master.quit()
