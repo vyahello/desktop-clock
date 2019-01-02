@@ -1,6 +1,13 @@
 # Desktop digital clock
 Simple desktop digital clock written in python.
 
+
+## Run desktop digital clock
+Run script from the root directory of the project:
+```bash
+python clock.py
+```
+
 ## Demo
 ![Screenshot](clock/demo/clock.png)
 

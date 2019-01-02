@@ -5,6 +5,7 @@ from tkinter import Tk
 class Window(ABC):
     """Represent abstraction of an environment window."""
 
+    @property
     @abstractmethod
     def root(self) -> Tk:
         """Return root of a window content."""

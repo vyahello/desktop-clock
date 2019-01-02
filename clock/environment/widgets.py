@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
-from tkinter import Tk, Label
 from typing import Callable, Tuple
+from tkinter import Tk, Label
+from clock.environment.windows import Window
 
 
 class Widget(ABC):
@@ -48,8 +49,8 @@ class PurpleUIWidget(Widget):
     )
     _back_ground: str = 'purple'
 
-    def __init__(self, master: Tk) -> None:
-        self._widget: Widget = UIWidget(master, self._font, self._back_ground)
+    def __init__(self, master: Window) -> None:
+        self._widget: Widget = UIWidget(master.root, self._font, self._back_ground)
 
     def create_grid(self) -> None:
         self._widget.create_grid()
